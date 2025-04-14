@@ -40,7 +40,7 @@ const transporter = nodemailer.createTransport({
 async function sendResetPasswordEmail(userEmail, resetToken) {
   const resetLink = `${process.env.BASE_URL}/reset-password?token=${resetToken}`;
   const mailOptions = {
-    from: `"Trackit" <${process.env.EMAIL_USER}>`,
+    from: `"Sellytics" <${process.env.EMAIL_USER}>`,
     to: userEmail,
     subject: 'Reset Your Password',
     text: `Hello Tracker! You requested a password reset.\n\nClick here to reset it:\n${resetLink}\n\nIf you did not request this, please ignore this email.`,
