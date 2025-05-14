@@ -8,8 +8,6 @@ const crypto = require('crypto'); // Node's crypto module
 const app = express();
 const port = process.env.PORT || 4000;
 
-
-
 app.use(express.json());
 app.use(cors());
 
@@ -49,9 +47,6 @@ async function sendResetPasswordEmail(userEmail, resetToken) {
     subject: 'Reset Your Password',
     text: `Hello Tracker! You requested a password reset.\n\nClick here to reset it:\n${resetLink}\n\nIf you did not request this, please ignore this email.`,
   };
-
-
-
 
 
 
