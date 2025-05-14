@@ -9,12 +9,6 @@ const app = express();
 const port = process.env.PORT || 4000;
 
 
-app.use(cors({
-  origin: ["http://localhost:3000", "https://sellytics.sprintifyhq.com/"], // Allow frontend
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
-}));
-
 
 app.use(express.json());
 app.use(cors());
